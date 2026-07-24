@@ -41,6 +41,25 @@ public class Spr1_4_2 {
         u %= i;
         System.out.println(u);
 
+        broke();
 
     }
+
+    static void broke(){
+        int a = 13;
+        int b = 3;
+
+        a = ++a - a % b++;
+        System.out.println(a + " и " + b);
+
+        a = 13;
+        b = 3;
+        ++a;
+        int d = a % b;
+        a -= d;
+        b++;
+        System.out.println(a + " и " + b);
+
+    }
+
 }
