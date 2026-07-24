@@ -1,7 +1,9 @@
-public class Spr1_3 {
+package TipsOfJava_3;
+
+public class Spr1_3_3 {
     public static void main(String[] args) {
         /*
-        Hamster homa = new Hamster();
+        TipsOfJava_3.Hamster homa = new TipsOfJava_3.Hamster();
         System.out.println("Имя хомяка: " + homa.name);
         System.out.println("Возрост хомяка: " + homa.age);
         System.out.println("Вес хомяка: " + homa.weight);

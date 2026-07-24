@@ -1,4 +1,6 @@
-public class Spr1_1 {
+package TipsOfJava_3;
+
+public class Spr1_3_1 {
     public static void main(String[] args) {
 
         String[] names = {"Маша", "Саша", "Катя", "Артем"};

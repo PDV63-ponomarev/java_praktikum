@@ -1,6 +1,6 @@
-import javax.smartcardio.Card;
+package TipsOfJava_3;
 
-public class Spr1_7 {
+public class Spr1_3_7 {
     public static void main(String[] args) {
 // передача в метод по ссылке и значению
         int number = 10;

@@ -1,4 +1,6 @@
-public class Spr1_6 {
+package TipsOfJava_3;
+
+public class Spr1_3_6 {
     static void main() {
 //        Парсинг. Преобразование строки в число
         String input = "1000";

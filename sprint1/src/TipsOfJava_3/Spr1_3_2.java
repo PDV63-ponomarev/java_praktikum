@@ -1,4 +1,6 @@
-public class Spr1_2 {
+package TipsOfJava_3;
+
+public class Spr1_3_2 {
     public static void main(String[] args) {
         String hello = "Hello!";
         int dayOfMonth = 27;

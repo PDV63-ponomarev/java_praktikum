@@ -1,4 +1,6 @@
-public class Spr1_5 {
+package TipsOfJava_3;
+
+public class Spr1_3_5 {
     public static void main() {
         //класс обертка нужна для преврашения примитивов в обьекты
 
