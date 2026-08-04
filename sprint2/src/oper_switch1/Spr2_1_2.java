@@ -1,4 +1,4 @@
-package oper_switch;
+package oper_switch1;
 
 // switch - альтернатива if else с множеством вариантов
 // блоки break и default необезательны
