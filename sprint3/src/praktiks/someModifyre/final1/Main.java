@@ -3,6 +3,8 @@ package praktiks.someModifyre.final1;
 import java.util.List;
 
 public class Main {
+    private Forest forest;
+
     public static void main(String[] args) {
         List<MountainHare> hares = List.of(
                 new MountainHare(4, 4.4, 120),
@@ -11,12 +13,13 @@ public class Main {
         );
 
         System.out.println("В лесу лето!");
-        // создайте объект "летний лес с зайцами"
+        Forest forest = new Forest(hares, "Лето");
 
         System.out.println("Список зайцев:");
-        // напечатайте список всех зайцев
+        forest.printHares();
+
         System.out.println("В лесу зима!");
-        // поменяйте время года на зиму
-        // напечатайте список всех зайцев
+        forest.setSeason("Зима");
+        forest.printHares();
     }
 }
