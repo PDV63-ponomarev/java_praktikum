@@ -28,32 +28,35 @@ public class Main {
                        если вес меньше 10 кг, то коэффициент 10, иначе - 15,
                    4. вывести сообщение "Количество бонусных баллов: <баллы>."
         */
-        switch (commandValue){
-            case "map":
-                System.out.println("Ссылка на карту: " + MAP_LINK);
-                break;
-            case "recyclability":
-                System.out.println("Введите код переработки:");
-                int code = scanner.nextInt();
-                isRecycled(code);
-                break;
-            case "bonus":
-                System.out.println("Введите количество вторсырья, кг:");
-                int quantity = scanner.nextInt();
+        try {
+            ChatCommand command = ChatCommand.valueOf(commandValue);
 
-                int coefficient;
-                if (quantity < 10){
-                    coefficient = 10;
-                } else {
-                    coefficient = 15;
-                }
+            switch (command){
+                case MAP:
+                    System.out.println("Ссылка на карту: " + MAP_LINK);
+                    break;
+                case RECYCLABILITY:
+                    System.out.println("Введите код переработки:");
+                    int code = scanner.nextInt();
+                    isRecycled(code);
+                    break;
+                case BONUS:
+                    System.out.println("Введите количество вторсырья, кг:");
+                    int quantity = scanner.nextInt();
 
-                int bonus = 0;
-                System.out.printf("Количество бонусных баллов: <%d>.", bonus);
-                break;
-            default:
-                System.out.println("Неверная команда");
-                break;
+                    int coefficient;
+                    if (quantity < 10){
+                        coefficient = 10;
+                    } else {
+                        coefficient = 15;
+                    }
+
+                    int bonus = quantity * coefficient;
+                    System.out.printf("Количество бонусных баллов: <%d>.", bonus);
+                    break;
+            }
+        } catch (IllegalArgumentException e) {
+            System.out.println("Неверная команда! Введите MAP, RECYCLABILITY или BONUS");
         }
 
     }
