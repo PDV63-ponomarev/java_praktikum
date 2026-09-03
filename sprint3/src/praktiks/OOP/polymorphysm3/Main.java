@@ -8,6 +8,7 @@ public class Main {
         System.out.println("Вас приветствует виртуальная АТС!");
 
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Введите ваш номер телефона:");
         String number = scanner.next();
         System.out.println("Введите номер пользователя, которому хотите позвонить:");
@@ -20,19 +21,20 @@ public class Main {
             return;
         }
 
-        getPhone(type, number).makeCall(friendNumber);
+        getPhone(type, number, friendNumber);
     }
 
-    public static ... getPhone(int type, String number) {
-        if (...) {
-            // Если выбран стационарный телефон, создайте объект класса CellularPhone
-            return new CellularPhone(number);
-        } else if (...) {
-            // Если выбран мобильный телефон, создайте объект класса MobilePhone
-            return new MobilePhone(number);
+    public static void getPhone(int type, String number, String friendNumber) {
+
+        if (type == 1) {
+            System.out.println("У вас стационарный телефон.");
+            new CellularPhone(number).makeCall(friendNumber);
+        } else if (type == 2) {
+            System.out.println("У вас мобильный телефон.");
+            new MobilePhone(number).methodOfCommunication(friendNumber);
         } else {
-            // Иначе создайте экземпляр класса Smartphone
-            ...
+            System.out.println("У вас смартфон.");
+            new Smartphone(number).methodOfCommunication(friendNumber);
         }
     }
 }
