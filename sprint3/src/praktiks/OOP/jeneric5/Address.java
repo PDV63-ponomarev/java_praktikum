@@ -1,34 +1,35 @@
 package praktiks.OOP.jeneric5;
 
 // Унаследуйте класс от базового класса, описывающего контакт Contact
-public class Address ... {
+public class Address extends Contact {
 private final String city;
 private final String address;
 
-public Address(String name, String city, String address) {
-        ...
-    this.city = city;
-    this.address = address;
-}
 
-public String getCity() {
-    return city;
-}
+    public Address(String name, String city, String address) {
+        super(name);
+        this.city = city;
+        this.address = address;
+    }
 
-public String getAddress() {
-    return address;
-}
+    public String getCity() {
+        return city;
+    }
 
-// Метод sendMessage переопределяет метод базового класса
-    ...
-public void sendMessage() {
-    System.out.println("Отправим открытку в город " + city + " по адресу: " + address);
-}
+    public String getAddress() {
+        return address;
+    }
 
-    ...
-public void print() {
-    System.out.println("Город: " + getCity());
-    System.out.println("Адрес: " + getAddress());
-}
+    // Метод sendMessage переопределяет метод базового класса
+    @Override
+    public void sendMessage() {
+        System.out.println("Отправим открытку в город " + city + " по адресу: " + address);
+    }
+
+    @Override
+    public void print() {
+        System.out.println("Город: " + getCity());
+        System.out.println("Адрес: " + getAddress());
+    }
 
 }
