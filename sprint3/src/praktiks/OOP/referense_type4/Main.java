@@ -12,34 +12,37 @@ public class Main {
 
     while (true) {
         printMenu();
-        // Считайте команду, введенную пользователем
-            ...
+
+        int command = scanner.nextInt();
 
         if (command == 1) {
             System.out.println("Введите название фильма:");
             String title = scanner.next();
+            scanner.nextLine();
             System.out.println("Введите длительность фильма в минутах:");
             int runtime = scanner.nextInt();
 
-            // На основе введенных пользователем значений создайте объект класса Movie
-            Movie movie = ...;
+            Movie movie = new Movie(title, runtime);
             mediaItems.add(movie);
         } else if (command == 2) {
             System.out.println("Введите название сериала:");
             String title = scanner.next();
+            scanner.nextLine();
             System.out.println("Введите количество серий:");
             int seriesCount = scanner.nextInt();
             System.out.println("Введите среднюю длительность серии в минутах");
             int runtime = scanner.nextInt();
 
-            // Создайте сериал и добавьте его в список просмотренных
-                ...
+            Series series = new Series(title, seriesCount, runtime);
+            mediaItems.add(series);
         } else if (command == 0) {
             printMediaItemsList(mediaItems);
 
             double totalRuntime = Calculator.calculate(mediaItems);
             System.out.println("Всего вы потратили на просмотр фильмов и сериалов, в днях: " + totalRuntime);
             break;
+        } else {
+            System.out.println("Ошибка ввода");
         }
     }
 }
@@ -53,7 +56,6 @@ public class Main {
 
     public static void printMediaItemsList(List<MediaItem> mediaItems) {
         System.out.println("Вы посмотрели фильмов и сериалов: " + mediaItems.size());
-        // Допишите вывод названий всех просмотренных фильмов и сериалов
-        ...
+        Calculator.calculate(mediaItems);
     }
 }

@@ -5,10 +5,17 @@ import java.util.List;
 public class Calculator {
     private Calculator() {}
 
-    public static int calculate(List<MediaItem> mediaItems) {
-        int day = 0;
-        // Напишите реализацию метода, который будет возвращать общее количество дней,
-        // потраченных на просмотр фильмов и сериалов
+    public static double calculate(List<MediaItem> mediaItems) {
+        double day = 0;
+
+        for (MediaItem media: mediaItems)
+            if (media instanceof Series){
+                day += media.getRuntime() * ((Series) media).getSeriesCount();
+            } else {
+                day += media.getRuntime();
+            }
+        day = day / (60 * 24);
+        day = Math.floor(day * 10) / 10;
         return day;
     }
 }
