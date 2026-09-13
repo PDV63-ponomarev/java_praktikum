@@ -1,4 +1,4 @@
-package practic.interface2.array_list;
+package practic.collections.array_list2;
 
 public class HandMadeArrayList<T> {
 

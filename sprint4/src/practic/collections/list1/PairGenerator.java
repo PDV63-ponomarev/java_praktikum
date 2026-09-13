@@ -1,4 +1,4 @@
-package practic.interface2.list;
+package practic.collections.list1;
 
 import java.util.ArrayList;
 import java.util.List;

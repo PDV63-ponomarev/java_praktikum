@@ -1,4 +1,4 @@
-package practic.LinkedList3;
+package practic.collections.LinkedList3;
 
 import java.util.NoSuchElementException;
 

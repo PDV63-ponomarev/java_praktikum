@@ -1,4 +1,4 @@
-package practic.interface2.list;
+package practic.collections.list1;
 
 public class Stranger {
     public final String name;
