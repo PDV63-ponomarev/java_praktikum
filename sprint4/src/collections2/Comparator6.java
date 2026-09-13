@@ -1,4 +1,4 @@
-package collections2.comparator6;
+package collections2;
 
 /*
 
