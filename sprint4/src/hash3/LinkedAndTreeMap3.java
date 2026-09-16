@@ -135,7 +135,7 @@ pollFirstEntry() и pollLastEntry() возвращают последнию и �
 
 import java.util.*;
 
-public class LinkedAndTreeMap {
+public class LinkedAndTreeMap3 {
 
     public static void main(String[] args) {
 //        users();
