@@ -1,7 +1,11 @@
 package practic.hash.set4;
 
+import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
+
 
 public class Main {
     private static List<String> allPurchases = List.of(
@@ -20,15 +24,16 @@ public class Main {
 
     public static void main(String[] args) {
         // переменная uniquePurchases должна содержать множество уникальных товаров
-        ... uniquePurchases = ...
+        Object Collection;
+        Set<String> uniquePurchases = findUniquePurchases(allPurchases);
 
         // допишите вывод количества уникальных товаров
-        System.out.println( "За месяц было куплено " + ... + " уникальных товаров.");
+        System.out.println( "За месяц было куплено " + uniquePurchases.size() + " уникальных товаров.");
     }
 
     // реализуйте этот метод
-    public static ... findUniquePurchases(List<String> allPurchases) {
-        ...
+    public static Set<String>  findUniquePurchases(List<String> allPurchases){
+        return new HashSet<>(allPurchases);
     }
 }
-}
+
